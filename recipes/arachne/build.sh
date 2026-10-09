@@ -12,11 +12,10 @@ export MACOSX_DEPLOYMENT_TARGET=11.0
 mkdir -p "${GOCACHE}"
 mkdir -p "${PREFIX}/bin"
 
-# build bwa
-make CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}" -j"${CPU_COUNT}" -C gobwa/bwa libbwa.a
+# build minibwa
+make CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}" -j"${CPU_COUNT}" -C gominibwa/minibwa libminibwa.a minibwa
 
 # build arachne
-go build -ldflags "-X arachne/aligner.VERSION=${PKG_VERSION}" -o $PREFIX/bin/arachne
-chmod +x $PREFIX/bin/arachne
+go build -ldflags "-X arachne/aligner.VERSION=${PKG_VERSION} -s -w" -o $PREFIX/bin/arachne
 
 go-licenses save . --save_path="${SRC_DIR}/library_licenses"  
