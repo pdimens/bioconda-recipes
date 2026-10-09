@@ -27,7 +27,7 @@ requirements:
     - libgomp
   run:
     - samtools >=1.23
-    - minibwa =0.7
+    - minibwa >=0.7,<0.8
 
 test:
   commands:
