@@ -3,7 +3,7 @@
 export GOCACHE="$PWD/.cache"
 export CGO_ENABLED=1
 export GO111MODULE=on
-export CGO_LDFLAGS="-L${SRC_DIR}/gobwa/bwa -L${PREFIX}/lib"
+export CGO_LDFLAGS="-L${SRC_DIR}/gominibwa/minibwa -L${PREFIX}/lib"
 export CFLAGS="${CFLAGS} -g -Wall -Wno-unused-function -O3"
 export CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
 export LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
