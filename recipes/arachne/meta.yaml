@@ -43,7 +43,7 @@ about:
   license_family: MIT
   license_file:
     - LICENSE
-    - gominibwa/minibwa/COPYING
+    - gominibwa/minibwa/LICENSE.txt
     - library_licenses/
   dev_url: "https://github.com/blinkseq/arachne"
   doc_url: "https://blinkseq.github.io/arachne/"
