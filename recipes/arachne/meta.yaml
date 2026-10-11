@@ -21,9 +21,12 @@ requirements:
     - go-licenses
     - make
   host:
+    - libgomp  # [linux]
+    - llvm-openmp  # [osx]
     - zlib
-    - libgomp
   run:
+    - libgomp  # [linux]
+    - llvm-openmp  # [osx]
     - samtools >=1.23
     - minibwa >=0.7,<0.8
 
