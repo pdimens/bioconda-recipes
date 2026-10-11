@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 export GOCACHE="$PWD/.cache"
 export CGO_ENABLED=1
@@ -18,4 +18,4 @@ make CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}" -
 # build arachne
 go build -ldflags "-X arachne/aligner.VERSION=${PKG_VERSION} -s -w" -o $PREFIX/bin/arachne
 
-go-licenses save . --save_path="${SRC_DIR}/library_licenses"  
+go-licenses save . --save_path="${SRC_DIR}/library_licenses"
