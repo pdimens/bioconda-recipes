@@ -17,7 +17,7 @@ requirements:
   build:
     - {{ stdlib('c') }}
     - {{ compiler('c') }}
-    - {{ compiler('go') }}
+    - {{ compiler('go-cgo') }}
     - go-licenses
     - make
   host:
